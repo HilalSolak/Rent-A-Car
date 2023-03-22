@@ -25,13 +25,11 @@ public class InMemoryBrandRepository implements BrandRepository {
         return brands;
     }
 
-    @Override
+ 
+        @Override
     public Brand getById(int id) {
-        for (Brand brand : brands) {
-            if(brand.getId()==id){
-                return brand;
-        }
-}
+        return brands.get(id-1);
+
     }
 
     @Override

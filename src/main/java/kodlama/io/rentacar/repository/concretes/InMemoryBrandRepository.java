@@ -28,10 +28,10 @@ public class InMemoryBrandRepository implements BrandRepository {
     @Override
     public Brand getById(int id) {
         for (Brand brand : brands) {
-            if(brand.getId()==id)
+            if(brand.getId()==id){
                 return brand;
-        }throw new RuntimeException("Aradığınız ürün bulunamadı! ");
-
+        }
+}
     }
 
     @Override
